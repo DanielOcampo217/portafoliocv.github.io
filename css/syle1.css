@@ -550,6 +550,89 @@ form.form_contact input[type="button"]:hover {
     }
 }
 
+.portafolio {
+    font-family: Play;
+}
+
+.proyectos {
+    display: flex;
+}
+
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -70px;
+}
+
+.contenedor figure {
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.50);
+    cursor: pointer;
+}
+
+.contenedor figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out
+}
+
+.contenedor figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 103, 123, 0.7);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover>.capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor figure:hover>.capa h3 {
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.contenedor figure .capa h3 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.contenedor figure .capa p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+.contenedor figure .capa .botoneslink {
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: Play;
+    top: 10px;
+    border: 1px;
+    border-radius: 10px;
+    padding: 3px 5px;
+    transition: 0.3s;
+}
+
 @media (max-width: 1000px) {
     .img1 {
         max-width: 100%;
@@ -677,6 +760,12 @@ form.form_contact input[type="button"]:hover {
         margin-left: -40px;
         margin-top: 80px;
         padding-bottom: 70px;
+    }
+    .proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: minmax(200px, auto);
+        gap: 20px;
     }
 }
 
